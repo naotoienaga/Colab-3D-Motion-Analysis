@@ -2,6 +2,10 @@
 Welcome! This guide will walk you through creating 3D visualizations of human motion from 2D videos. You will use two web-based tools: one for camera calibration and another for 3D pose estimation.  
 No deep technical knowledge is required. Just follow the steps below, and you'll be on your way to analyzing movement in 3D!
 
+First code for camera calibration [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/naotoienaga/Colab-3D-Motion-Analysis/blob/main/CameraCalibration.ipynb)
+
+Second code for pose estimation and motion visualization [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/naotoienaga/Colab-3D-Motion-Analysis/blob/main/PoseEstimation.ipynb)
+
 ---
 
 ## **Part 0: Getting Started with Google Colab**
@@ -27,9 +31,7 @@ Think of Google Colab as a free online code editor that runs in a web browser. Y
 3.  Right-click on the file and select _Copy path_.
 4.  Paste this path into the code where needed.
 
-
-[**Suggestion:** Insert an image here showing the Colab interface with an arrow pointing to the folder icon, and another arrow pointing to the "Copy path" option in the right-click menu.]
-
+<img src="images/colab.jpg" width="500">
 
 ---
 
@@ -37,13 +39,15 @@ Think of Google Colab as a free online code editor that runs in a web browser. Y
 :dart:Goal: Before you can analyze motion, you need to teach the software about your cameras—their lens properties and their exact positions and angles relative to each other. This process is called _camera calibration_.
 
 ### **Step 1: Generate and Print Your Calibration Board**
-1.  Open the first notebook _**(the calibration script)**_.
+1.  Open the first notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/naotoienaga/Colab-3D-Motion-Analysis/blob/main/CameraCalibration.ipynb)
 2.  In the second user configuration cell, you can adjust the properties of the board if you wish.
 3.  Run the first few cells until the `charuco_board.png` image is displayed and saved.
 4.  Download this image and print it. For best results, tape it onto a flat, rigid surface like cardboard or foam board.
 
 ### **Step 2: Film Your Calibration Video**
 You need two cameras to record the calibration board at the same time. The GIF in the cell labeled "Display Detection Result as GIF" is an example of the recording.
+
+![Calibration example](images/calib.jpg)
 
 #### **Filming Tips:**
 * **Turn Off Auto Settings:** In your camera settings, disable Autofocus (AF) and Auto White Balance (AWB). Set the focus manually to the distance where the participant would be. This prevents the camera from changing settings during recording, which would ruin the calibration.
@@ -69,10 +73,12 @@ You need two cameras to record the calibration board at the same time. The GIF i
 3.  **Again, Synchronize:** Just like before, start and end both recordings at the same time on the frame level.
 
 ### **Step 2: Run the Pose Estimation Code**
-1.  Open the second notebook. _**(the pose estimation and visualization script)**._
+1.  Open the second notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/naotoienaga/Colab-3D-Motion-Analysis/blob/main/PoseEstimation.ipynb)
 2.  Upload your two new videos (of the participant) to your Drive.
 3.  Update the file paths in the code. Make sure the path to your calibration data from Part 1 is also correct.
 4.  Run all the cells in order. This process may take some time, as it analyzes every frame of your videos. **If your input video is too long, you may exceed Colab's memory limit, which could result in your session being terminated**.
+
+![Calibration example](images/pose.jpg)
 
 ### **Step 3: 3D Visualizations**
 1.  **Wrist Trajectories Plot:** This shows a reference skeleton of the participant's average position and their wrist trajectories. The colored lines trace the path of the participant's right (red) and left (blue) wrists through 3D space. The color fades along the path, showing the direction of movement over time.
