@@ -31,7 +31,7 @@ Think of Google Colab as a free online code editor that runs in a web browser. Y
 3.  Right-click on the file and select _Copy path_.
 4.  Paste this path into the code where needed.
 
-<img src="images/colab.jpg" width="500">
+![Calibration example](images/colab.jpg)
 
 ---
 
