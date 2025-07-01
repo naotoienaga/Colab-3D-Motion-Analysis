@@ -45,7 +45,7 @@ Think of Google Colab as a free online code editor that runs in a web browser. Y
 4.  Download this image and print it. For best results, tape it onto a flat, rigid surface like cardboard or foam board.
 
 ### **Step 2: Film Your Calibration Video**
-You need two cameras to record the calibration board at the same time. The GIF in the cell labeled "Display Detection Result as GIF" is an example of the recording.
+You need two cameras to record the calibration board at the same time. The example frame is shown below.
 
 ![Calibration example](images/calib.jpg)
 
