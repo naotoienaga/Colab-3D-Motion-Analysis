@@ -81,7 +81,7 @@ You need two cameras to record the calibration board at the same time. The examp
 ![Calibration example](images/pose.jpg)
 
 ### **Step 3: 3D Visualizations**
-1.  **Wrist Trajectories Plot:** This shows a reference skeleton of the participant's average position and their wrist trajectories. The colored lines trace the path of the participant's right (red) and left (blue) wrists through 3D space. The color fades along the path, showing the direction of movement over time.
+1.  **Wrist Trajectories Plot:** This shows a reference skeleton of the participant's average position and their wrist trajectories. The colored lines trace the path of the participant's right (red) and left (blue) wrists through 3D space. The color gets darker along the path, showing the direction of movement over time.
 2.  **3D Heatmap:** The colored blocks represent a heatmap. Areas with more solid blocks are where the participant's hands spent the most time. This is great for identifying common gesture zones. **If _grid_resolution_ is too large, you may exceed Colab's memory limit, which could result in your session being terminated**. We recommend starting with a small value.
 
 You can drag on these plots to rotate the view and see the visualizations from any angle.
