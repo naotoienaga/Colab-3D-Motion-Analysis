@@ -45,19 +45,22 @@ Think of Google Colab as a free online code editor that runs in a web browser. Y
 4.  Download this image and print it. For best results, tape it onto a flat, rigid surface like cardboard or foam board.
 
 ### **Step 2: Film Your Calibration Video**
-You need two cameras to record the calibration board at the same time. The example frame is shown below.
-
-![Calibration example](images/calib.jpg)
+There are two types of calibration: **intrinsic** and **extrinsic**. Example frames for each type are shown below.  
+**Intrinsic calibration** corrects for lens distortion of a single camera. This is usually done once per camera. You film by moving the camera around a fixed board.
+![Calibration example](images/calib_in.jpg)
+**Extrinsic calibration** determines the relative positions and orientations between two cameras. This must be done each time the camera setup changes. You film by moving the board in front of two fixed cameras.
+![Calibration example](images/calib_ex.jpg)
 
 #### **Filming Tips:**
-* **Turn Off Auto Settings:** In your camera settings, disable Autofocus (AF) and Auto White Balance (AWB). Set the focus manually to the distance where the participant would be. This prevents the camera from changing settings during recording, which would ruin the calibration.
-* **Synchronize Two Videos:** Start recording on both cameras at the same time. A simple trick is to clap your hands once in front of both cameras right after you start recording and just before you finish recording. This sound spike will help you sync them later if needed.
-* **Move the Board, Not the Cameras:** Place your two cameras in their final, fixed positions. Do not move them during or after calibration. To capture the video, move the printed board around in front of them.
-* **Cover All Angles:** Slowly and smoothly move the board so it's visible in all corners and at various angles and distances in both camera views. Make sure to tilt it forwards, backward, left, and right. The board needs to be moved in the area where the participant will move. Aim for a 30-60 second video.
 * **Video Quality and Board Size:** Record at a good resolution (e.g., 1080p) and a consistent frame rate (e.g., 30 FPS). Ensure both cameras use the same settings. Pay attention to the distance between the participant and the camera. If the distance is great, a larger board will be needed. You may also need higher image quality to ensure the board is detected correctly. You can reduce the number of squares and make each one larger. If the distance is short, as in the example I show, the calibration process is easy.
+* **Turn Off Auto Settings:** In your camera settings, disable Autofocus (AF) and Auto White Balance (AWB). Set the focus manually to the distance where the participant would be. This prevents the camera from changing settings during recording, which would ruin the calibration.
+* **Cover All Angles:** Slowly and smoothly move the camera (intrinsic) or board (extrinsic) so it's visible in all corners and at various angles and distances in both camera views. Make sure to tilt it forwards, backward, left, and right. The board needs to be moved in the area where the participant will move. Aim for a 30-60 second video.
+* **Move the Camera, Not the Board (for intrinsic calibration)**: Place the board in a fixed position. Then, capture the board from many different angles and distances by moving the camera around it. Tilting the camera is crucial because it helps the software accurately model lens distortion.
+* **Move the Board, Not the Cameras (for extrinsic calibration):** Place your two cameras in their final, fixed positions. Do not move them during or after calibration. To capture the video, move the printed board around in front of them.
+* **Synchronize Two Videos (for extrinsic calibration only):** Start recording on both cameras at the same time. A simple trick is to clap your hands once in front of both cameras right after you start recording and just before you finish recording. This sound spike will help you sync them later if needed.
 
 ### **Step 3: Run the Calibration Code**
-1.  Upload your two calibration videos to your Google Drive.
+1.  Upload your calibration videos to your Google Drive. Assuming four videos (two for internal and synchronized two for external).
 2.  Copy their file paths and paste them into the "File paths" section of the notebook.
 3.  Run all the cells in the notebook from top to bottom.
 4.  At the end, the script will save your calibration data to the path you specified. You are now ready for the next stage! :sunglasses:
