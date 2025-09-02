@@ -90,3 +90,10 @@ There are two types of calibration: **intrinsic** and **extrinsic**. Example fra
 You can drag on these plots to rotate the view and see the visualizations from any angle.
 
 Congratulations :tada: You have successfully captured and visualized motion in 3D.
+
+## Citation
+Naoto Ienaga, Kazuki Sekine. (2025). Automatic measurement of gestures space. _The 10th Conference of the International Society for Gesture Studies (ISGS)_. Nijmegen, The Netherlands. (Poster Presentation)
+
+### Additional Sources (in Japanese)
+1.  家永直人, 関根和生. (2024). 身振りの三次元計測に向けた簡便な手法の比較検討 (Comparative Study of Easy-to-use Methods for 3D Measurement of Gestures). _電子情報通信学会総合大会 (IEICE General Conference)_.
+2.  家永直人, 関根和生. (2025). 身振り空間の三次元解析に向けた姿勢推定手法 (Pose Estimation Method for 3D Analysis of Gesture Space). _日本認知科学会第42回大会 (The 42nd Annual Meeting of Japanese Cognitive Science Society)_. (Poster Presentation)
